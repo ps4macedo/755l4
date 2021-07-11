@@ -94,12 +94,11 @@ window.applicationCache.oncached=function(){document.getElementById("msgs").inne
 
 <br><br>
 <h1 id=progress class="titlehead" style='font-size:35px;text-align:center;color:#ffffff;'>Carregando... Por favor, <font color="#ee596f">espere!!!</font></h1>
-<hr width="84%" size="1" color="#ff5757">
+<hr width="75%" size="1" color="#ff5757">
 
 <h2 id=msgs style='font-size:31px;text-align:center;color:#ffffff;'></h1>
 <table id="load" align="center" style="width:1100px;margin-top:30px;"></table>
 <br><br><br><br>
-<h2 id=msgs2 style='font-size:31px;text-align:center;color:#ffffff;'></h1>
 <button style="opacity:0" id="input1" onfocus="handle2()"></button>
 <button style="opacity:0" id="input2"></button>
 <button style="opacity:0" id="input3" onfocus="handle2()"></button>
@@ -131,12 +130,12 @@ document.getElementById('msgs').innerHTML='<tr>'+
 '</tr>'+
 '<tr>'+
 '<td align="center" colspan="8">'+
-'<a href="#" id="goldhen2" class="button" onMouseOver="progress.innerHTML=\'Ativa GoldHEN v1.1 (SiSTRo) + FTP\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="toggle_payload(\'goldhen2\'); return false" style=""><font color="#6089f6">GoldHEN 1.1</font></a>&nbsp;'+
-'<a href="#" id="goldhen" class="button" onMouseOver="progress.innerHTML=\'Ativa GoldHEN v1.0 (SiSTRo) + FTP\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="toggle_payload(\'goldhen\'); return false" style=""><font color="#6089f6">GoldHEN 1.0</font></a>&nbsp;'+
-'<a href="#" id="hen213b" class="button" onMouseOver="progress.innerHTML=\'Ativa HEN v2.1.3b (Karo)\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="load_hen213b(); return false" style=""><font color="#6089f6">HEN 213b</font></a>&nbsp;'+
-'<a href="#" id="mira" class="button" onMouseOver="progress.innerHTML=\'Ativa Mira (AlAzif)\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="toggle_payload(\'mira\'); return false" style=""><font color="#ee596f">MIRA</font></a>&nbsp;'+
-'<a href="#" id="mira2" class="button" onMouseOver="progress.innerHTML=\'Ativa Mira+ (Karo)\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="toggle_payload(\'mira2\'); return false" style=""><font color="#ee596f">MIRA+</font></a>&nbsp;'+
-'<a href="#" id="binloader" class="button" onMouseOver="progress.innerHTML=\'Permite enviar arquivos .BIN para o PS4 pela porta 9020.\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="toggle_payload(\'binloader\'); return false" style="">Bin Loader</a>&nbsp;'+
+'<a href="#" id="goldhen2" class="button" onMouseOver="progress.innerHTML=\'Ativa GoldHEN v1.1 (SiSTRo) + FTP\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'"; onclick="load_goldhen11(); return false" ><font color="#6089f6">GoldHEN 1.1</font></a>&nbsp;'+
+'<a href="#" id="goldhen" class="button" onMouseOver="progress.innerHTML=\'Ativa GoldHEN v1.0 (SiSTRo) + FTP\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="load_goldhen10(); return false" ><font color="#6089f6">GoldHEN 1.0</font></a>&nbsp;'+
+'<a href="#" id="hen213b" class="button" onMouseOver="progress.innerHTML=\'Ativa HEN v2.1.3b (Karo)\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="load_hen213b(); return false" ><font color="#6089f6">HEN 213b</font></a>&nbsp;'+
+'<a href="#" id="mira" class="button" onMouseOver="progress.innerHTML=\'Ativa Mira (AlAzif)\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="load_mira(); return false" ><font color="#ee596f">MIRA</font></a>&nbsp;'+
+'<a href="#" id="mira2" class="button" onMouseOver="progress.innerHTML=\'Ativa Mira+ (Karo)\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="load_mira2b(); return false" ><font color="#ee596f">MIRA+</font></a>&nbsp;'+
+'<a href="#" id="binloader" class="button" onMouseOver="progress.innerHTML=\'Permite enviar arquivos .BIN para o PS4 pela porta 9020.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'binloader\'); return false" >Bin Loader</a>&nbsp;'+
 '</td>'+
 '</tr>'+
 '<tr><td><br/></td></tr>'+
@@ -146,16 +145,16 @@ document.getElementById('msgs').innerHTML='<tr>'+
 '</tr>'+
 '<tr>'+
 '<td align="center"  colspan="8">'+
-'<a href="#" id="toolbox" class="button" onMouseOver="progress.innerHTML=\'Modificação da IU do ps para ajudar a lançar e desenvolver homebrew.\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="toggle_payload(\'toolbox\'); return false">toolbox</a>&nbsp;'+
-'<a href="#" id="dumper" class="button" onMouseOver="progress.innerHTML=\'Permite fazer cópia de segurança de seus jogos via USB.\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="toggle_payload(\'dumper\'); return false" style="">Dumper</a>&nbsp;'+
-'<a href="#" id="backup" class="button" onMouseOver="progress.innerHTML=\'Faz cópia do banco de dados e dados de usuários via USB.\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="toggle_payload(\'backup\'); return false" style="">backup</a>&nbsp;'+
-'<a href="#" id="restore" class="button" onMouseOver="progress.innerHTML=\'Restaura cópia do banco de dados e dados de usuário via USB.\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="toggle_payload(\'restore\'); return false" style="">restore</a>&nbsp;'+
-'<a href="#" id="app2usb" class="button" onMouseOver="progress.innerHTML=\'Transfere jogos do console para um hd externo (exFAT).\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="toggle_payload(\'app2usb\'); return false" style="">App2USB</a>&nbsp;'+
-'<a href="#" id="ps4debug" class="button" onMouseOver="progress.innerHTML=\'Permite usar o PS4 Offline Account Activator.\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="toggle_payload(\'ps4debug\'); return false" style="">PS4Debug</a>&nbsp;'+
-'<a href="#" id="todex" class="button" onMouseOver="progress.innerHTML=\'Modo de depuração do console (teste de devkit).\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="toggle_payload(\'todex\'); return false" style="">ToDex</a>&nbsp;'+
-'<a href="#" id="webrte" class="button" onMouseOver="progress.innerHTML=\'Para gerenciamento de trapaças.\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="toggle_payload(\'webrte\'); return false" style="">WebRTE</a>&nbsp;'+
-'<a href="#" id="webactive" class="button" onMouseOver="progress.innerHTML=\'Para ativar conta PSN offline.\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="toggle_payload(\'payload\'); return false" style="">Web Active</a>&nbsp;'+
-'<a href="#" id="fancontrol" class="button" onMouseOver="progress.innerHTML=\'Controle de velocidade do cooler para uma temperatura alvo do PS4.\'"; onmouseout="progress.innerHTML=\'<font color="#6089f6">PS4MACEDO JAILBREAK 7.55</font>\'" onclick="toggle_payload(\'fancontrol\'); return false" style="">Temp</a>&nbsp;<select id="temp"  style="font-size:20px;height:35px;width:60px;background-color:transparent;color:#ee596f;border:2px solid #404040;"><option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option><option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option><option value="68">68</option><option value="69">69</option><option value="70" selected>70</option><option value="71">71</option><option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option><option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option><option value="80">80</option></select><font size=5px>&#176;C</font>'+
+'<a href="#" id="toolbox" class="button" onMouseOver="progress.innerHTML=\'Modificação da IU do ps para ajudar a lançar e desenvolver homebrew.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'toolbox\'); return false">toolbox</a>&nbsp;'+
+'<a href="#" id="dumper" class="button" onMouseOver="progress.innerHTML=\'Permite fazer cópia de segurança de seus jogos via USB.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'dumper\'); return false" >Dumper</a>&nbsp;'+
+'<a href="#" id="backup" class="button" onMouseOver="progress.innerHTML=\'Faz cópia do banco de dados e dados de usuários via USB.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'backup\'); return false" >backup</a>&nbsp;'+
+'<a href="#" id="restore" class="button" onMouseOver="progress.innerHTML=\'Restaura cópia do banco de dados e dados de usuário via USB.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'restore\'); return false" >restore</a>&nbsp;'+
+'<a href="#" id="app2usb" class="button" onMouseOver="progress.innerHTML=\'Transfere jogos do console para um hd externo (exFAT).\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'app2usb\'); return false" >App2USB</a>&nbsp;'+
+'<a href="#" id="ps4debug" class="button" onMouseOver="progress.innerHTML=\'Permite usar o PS4 Offline Account Activator.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'ps4debug\'); return false" >PS4Debug</a>&nbsp;'+
+'<a href="#" id="todex" class="button" onMouseOver="progress.innerHTML=\'Modo de depuração do console (teste de devkit).\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'todex\'); return false" >ToDex</a>&nbsp;'+
+'<a href="#" id="webrte" class="button" onMouseOver="progress.innerHTML=\'Para gerenciamento de trapaças.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'webrte\'); return false" >WebRTE</a>&nbsp;'+
+'<a href="#" id="webactive" class="button" onMouseOver="progress.innerHTML=\'Para ativar conta PSN offline.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'payload\'); return false" >Web Active</a>&nbsp;'+
+'<a href="#" id="fancontrol" class="button" onMouseOver="progress.innerHTML=\'Controle de velocidade do cooler para uma temperatura alvo do PS4.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'fancontrol\'); return false" >Temp</a>&nbsp;<select id="temp"  style="font-size:20px;height:35px;width:60px;background-color:transparent;color:#ee596f;border:2px solid #404040;"><option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option><option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option><option value="68">68</option><option value="69">69</option><option value="70" selected>70</option><option value="71">71</option><option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option><option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option><option value="80">80</option></select><font size=5px>&#176;C</font>'+
 '</td>'+
 '</tr>'+
 '<tr><td><br/></td></tr>'+
@@ -167,7 +166,7 @@ window.midExploit = function(){preloadScripts(['blob.js'], go);}
 
 window.postExploit = function(){
 mymenu.style.display="block";
-setTimeout(function(){eval.call(window, scriptCode);},2000);load_exploit();}
+setTimeout(function(){eval.call(window, scriptCode);},3000);load_exploit();}
 </script>
 
 <div id=mymenu style="display:none">
@@ -190,18 +189,48 @@ function getScript(source,callback){var gs=document.createElement('script');gs.s
 function loadScript2(){getScript("exp_loaderPL.js",function(){});}
 	
 function load_exploit(){
-progress.innerHTML="Processo de exploração do kernel. Ao iniciar exploração, <font style='color:#ee596f'> não use o controle</font>.";
+progress.innerHTML="Iniciando a exploração do kernel. <font style='color:#ee596f'> Não use o controle</font> durante o processo.";
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
-function loadScript(){getScript("jb.js",function(){setTimeout(jailbreak,2000);});}
-msgs.innerHTML="<br><br><br><br><font style='color:#ee596f'> A G U A R D E . . .</font>";
+function loadScript(){getScript("jb.js",function(){setTimeout(jailbreak,3000);});}
+msgs.innerHTML="<br><br><br><font style='color:#ee596f'> A G U A R D E . . .<br><br>RISCO DE KERNEL PANIC!</font>";
 loadScript();
 }
 
-function load_hen213b(){
-progress.innerHTML="<font style='color:#ee596f'>Carregando Hen v2.1.3b,</font> aguarde...";
-LoadedMSG="<font style='color:#ee596f'>Hen v2.1.3b</font>  carregado com sucesso.";
-PLfile = "pl_hen.bin"
+function load_goldhen11(){
+progress.innerHTML="<font style='color:#ee596f'>Carregando GoldHen v1.1</font>, aguarde...";
+LoadedMSG="<font style='color:#ee596f'>GoldHen v1.1</font> carregado com sucesso.";
+PLfile = "pl_goldhen_1.1.bin"
 loadScript2();}
+
+function load_goldhen10(){
+progress.innerHTML="<font style='color:#ee596f'>Carregando GoldHen v1.0</font>, aguarde...";
+LoadedMSG="<font style='color:#ee596f'>GoldHen v1.0</font> carregado com sucesso.";
+PLfile = "pl_goldhen_1.0.bin";
+loadScript2();}
+
+function load_hen213b(){
+progress.innerHTML="<font style='color:#ee596f'>Carregando Hen v2.1.3b</font>, aguarde...";
+LoadedMSG="<font style='color:#ee596f'>Hen v2.1.3b</font>  carregado com sucesso.";
+PLfile = "pl_henb.bin"
+loadScript2();}
+
+function load_mira(){
+progress.innerHTML="<font style='color:#ee596f'>Carregando Mira</font>, aguarde...";
+LoadedMSG="<font style='color:#ee596f'>Mira</font> carregado com sucesso.";
+PLfile = "pl_mira.bin"
+loadScript2();}
+
+function load_mira2b(){
+progress.innerHTML="<font style='color:#ee596f'>Carregando Mira2b</font>, aguarde...";
+LoadedMSG="<font style='color:#ee596f'>Mira2b</font> carregado com sucesso.";
+PLfile = "payload/pl_mira2b.bin"
+loadScript2();}
+
+function load_binloader(){
+progress.innerHTML="<font style='color:#ee596f'>Carregando Bin Loader</font>, aguarde...";
+LoadedMSG="<font style='color:#ee596f'>Envie as cargas úteis pela porta 9021</font>";
+function loadScript(){getScript("exp_loaderBL.js",function(){});}
+loadScript();}
 </script>
 	
 </body>

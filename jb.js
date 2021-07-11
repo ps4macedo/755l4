@@ -2,24 +2,8 @@ function jailbreak(){
 var ropchain_array = new Uint32Array(482118);
 var ropchain = read_ptr_at(addrof(ropchain_array)+0x10);
 
-var timeleft = 0;
-var downloadTimer = setInterval(function(){
-  document.getElementById("msgs").innerHTML = "<br><br>Clique no botão \"INICIAR\" para iniciar a <font style='color:#ee596f'>exploração do kernel</font>.<br><br>Tempo após exploração do webkit: <font style='color:#ee596f'>" + timeleft + "</font> segundos<br>(<font style='color:#ee596f'>Recomenda-se aguardar de 60 a 120 segundos</font>)";
-  timeleft += 1;
-  document.getElementById('load').innerHTML='<tr>'+
-	'<td align="center" colspan="8">'+
-	'<a href="#" id="bt_iniciar" class="button" onclick="cond=\'true\'; return false"><font color="#ee596f"><b>Iniciar</b></font></a>&nbsp;'+
-	'</td>'+
-	'</tr>';
-  if(cond){
-    clearInterval(downloadTimer);
-	document.getElementById("bt_iniciar").remove();
-    document.getElementById("msgs").innerHTML = "<br><br><br>Agora, <font style='color:#ee596f'>executando</font> a exploração do kernel.<br><br><font style='color:#ee596f'>RISCO DE KERNEL PANIC!!!</font>";
- 	setTimeout(function(){contraKP();}, 1000);
-  }
-}, 1000);
+setTimeout(function(){
 
-function contraKP(){
 var ropchain_offset = 2;
 function set_gadget(val)
 {
@@ -150690,11 +150674,14 @@ var _ = malloc_nogc.pop();
 if (main_ret == 179 || main_ret == 0) {
 localStorage.passcount = ++localStorage.passcount;window.passCounter.innerHTML=localStorage.passcount; localStorage.desempenho=Math.round((parseInt(localStorage.passcount)/(parseInt(localStorage.passcount)+parseInt(localStorage.failcount)))*100); window.desempenho.innerHTML=localStorage.desempenho;
 localStorage.infoDesb = "<font style='color:#6089f6'>Exploração do kernel realizada.</font>";window.infoDesb.innerHTML=localStorage.infoDesb; 
-setTimeout(function(){done();}, 2000);
+setTimeout(function(){done();}, 3000);
 } 
 else {
 localStorage.failcount = ++localStorage.failcount;window.failCounter.innerHTML=localStorage.failcount; localStorage.desempenho=Math.round((parseInt(localStorage.passcount)/(parseInt(localStorage.passcount)+parseInt(localStorage.failcount)))*100); window.desempenho.innerHTML=localStorage.desempenho;
-window.msgs.innerHTML="<h1 style='font-size:30px;'>A exploração falhou! - Reinicie o PS4 e tente novamente.</h1>";
+localStorage.infoDesb = "<font style='color:#ee596f'>Exploração do kernel FALHOU!!!</font>";window.infoDesb.innerHTML=localStorage.infoDesb; 
+window.progress.innerHTML="<font style='color:#ee596f'>	A EXPLORAÇÃO DO KERNEL FALHOU!!!</font>";
+window.msgs.innerHTML="<br><br><br><font style='color:#ee596f'>Reinicie o PS4 e tente novamente.</font><br><br> Para efitar kps seguidos, reinicie o PS4 e desligue totalmente, retire o cabo de força, <br>aguarde uns 5 minutos, só então, tente novamente.";
 }
+}, 3000);
 }
-}
+

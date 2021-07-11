@@ -2,10 +2,16 @@ CACHE MANIFEST
 
 bg1.png
 blob.js
-jb.js
+exp_loaderBL.js
 exp_loaderPL.js
 index.html
 int64.js
+jb.js
+pl_goldhen_1.0.bin
+pl_goldhen_1.1.bin
 pl_hen.bin
+pl_henb.bin
+pl_mira.bin
+pl_mira2b.bin
 ps4.js
 utils.js

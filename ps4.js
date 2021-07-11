@@ -121,7 +121,6 @@ function setupRW() {
 	/* ... */
 	if(window.postExploit){
 		document.getElementById("myProgress").remove();
-		document.getElementById("msgs2").innerHTML = "";
 		window.postExploit();
 	}
 

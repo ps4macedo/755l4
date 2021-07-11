@@ -4,7 +4,7 @@ function die(msg) {
 }
 
 function debug_log(msg) {
-	document.getElementById("msgs2").innerHTML=msg;
+	document.getElementById("msgs").innerHTML="<br><font color=\"#ee596f\"><b> A G U A R D E . . . </b></font><br><br>"+msg;
 	frame1();
 }
 
