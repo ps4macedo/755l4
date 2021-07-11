@@ -145,15 +145,15 @@ document.getElementById('msgs').innerHTML='<tr>'+
 '</tr>'+
 '<tr>'+
 '<td align="center"  colspan="8">'+
-'<a href="#" id="toolbox" class="button" onMouseOver="progress.innerHTML=\'Modificação da IU do ps para ajudar a lançar e desenvolver homebrew.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'toolbox\'); return false">toolbox</a>&nbsp;'+
-'<a href="#" id="dumper" class="button" onMouseOver="progress.innerHTML=\'Permite fazer cópia de segurança de seus jogos via USB.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'dumper\'); return false" >Dumper</a>&nbsp;'+
-'<a href="#" id="backup" class="button" onMouseOver="progress.innerHTML=\'Faz cópia do banco de dados e dados de usuários via USB.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'backup\'); return false" >backup</a>&nbsp;'+
-'<a href="#" id="restore" class="button" onMouseOver="progress.innerHTML=\'Restaura cópia do banco de dados e dados de usuário via USB.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'restore\'); return false" >restore</a>&nbsp;'+
-'<a href="#" id="app2usb" class="button" onMouseOver="progress.innerHTML=\'Transfere jogos do console para um hd externo (exFAT).\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'app2usb\'); return false" >App2USB</a>&nbsp;'+
+'<a href="#" id="toolbox" class="button" onMouseOver="progress.innerHTML=\'Modificação da IU do ps para ajudar a lançar e desenvolver homebrew.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="load_toolbox(); return false">toolbox</a>&nbsp;'+
+'<a href="#" id="dumper" class="button" onMouseOver="progress.innerHTML=\'Permite fazer cópia de segurança de seus jogos via USB.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="load_dumpergu(); return false" >Dumper</a>&nbsp;'+
+'<a href="#" id="backup" class="button" onMouseOver="progress.innerHTML=\'Faz cópia do banco de dados e dados de usuários via USB.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="load_DBBackup(); return false" >backup</a>&nbsp;'+
+'<a href="#" id="restore" class="button" onMouseOver="progress.innerHTML=\'Restaura cópia do banco de dados e dados de usuário via USB.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="load_DBRestore(); return false" >restore</a>&nbsp;'+
+'<a href="#" id="app2usb" class="button" onMouseOver="progress.innerHTML=\'Transfere jogos do console para um hd externo (exFAT).\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="load_app2usb(); return false" >App2USB</a>&nbsp;'+
 '<a href="#" id="ps4debug" class="button" onMouseOver="progress.innerHTML=\'Permite usar o PS4 Offline Account Activator.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'ps4debug\'); return false" >PS4Debug</a>&nbsp;'+
-'<a href="#" id="todex" class="button" onMouseOver="progress.innerHTML=\'Modo de depuração do console (teste de devkit).\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'todex\'); return false" >ToDex</a>&nbsp;'+
-'<a href="#" id="webrte" class="button" onMouseOver="progress.innerHTML=\'Para gerenciamento de trapaças.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'webrte\'); return false" >WebRTE</a>&nbsp;'+
-'<a href="#" id="webactive" class="button" onMouseOver="progress.innerHTML=\'Para ativar conta PSN offline.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'payload\'); return false" >Web Active</a>&nbsp;'+
+'<a href="#" id="todex" class="button" onMouseOver="progress.innerHTML=\'Modo de depuração do console (teste de devkit).\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="load_enabledex(); return false" >ToDex</a>&nbsp;'+
+'<a href="#" id="webrte" class="button" onMouseOver="progress.innerHTML=\'Para gerenciamento de trapaças.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="load_webrte(); return false" >WebRTE</a>&nbsp;'+
+'<a href="#" id="webactive" class="button" onMouseOver="progress.innerHTML=\'Para ativar conta PSN offline.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="load_webactivator(); return false" >Web Active</a>&nbsp;'+
 '<a href="#" id="fancontrol" class="button" onMouseOver="progress.innerHTML=\'Controle de velocidade do cooler para uma temperatura alvo do PS4.\'"; onmouseout="progress.innerHTML=\'<b>PS4MACEDO JAILBREAK 7.55</b>\'" onclick="toggle_payload(\'fancontrol\'); return false" >Temp</a>&nbsp;<select id="temp"  style="font-size:20px;height:35px;width:60px;background-color:transparent;color:#ee596f;border:2px solid #404040;"><option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option><option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option><option value="68">68</option><option value="69">69</option><option value="70" selected>70</option><option value="71">71</option><option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option><option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option><option value="80">80</option></select><font size=5px>&#176;C</font>'+
 '</td>'+
 '</tr>'+
@@ -228,9 +228,58 @@ loadScript2();}
 
 function load_binloader(){
 progress.innerHTML="<font style='color:#ee596f'>Carregando Bin Loader</font>, aguarde...";
-LoadedMSG="<font style='color:#ee596f'>Envie as cargas úteis pela porta 9021</font>";
+LoadedMSG="Envie as cargas úteis pela <font style='color:#ee596f'>porta 9021</font>";
 function loadScript(){getScript("exp_loaderBL.js",function(){});}
 loadScript();}
+
+function load_app2usb(){
+progress.innerHTML="<font style='color:#ee596f'>Carregando App-To-Usb</font>, aguarde...";
+LoadedMSG="<font style='color:#ee596f'>App-To-Usb</font> carregado com sucesso.";
+PLfile = "pl_app2usb.bin";
+loadScript2();}
+
+function load_webactivator(){
+progress.innerHTML="<font style='color:#ee596f'>Carregando Web-Activator</font>, aguarde...";
+LoadedMSG="<font style='color:#ee596f'>Web-Activator</font> carregado com sucesso.";
+PLfile = "pl_webactivator.bin";
+loadScript2();}
+
+function load_toolbox(){
+progress.innerHTML="<font style='color:#ee596f'>Carregando ToolBox</font>, aguarde...";
+LoadedMSG="<font style='color:#ee596f'>ToolBox</font> carregado com sucesso.";
+PLfile = "pl_toolbox.bin";
+loadScript2();}
+
+function load_DBBackup(){
+progress.innerHTML="<font style='color:#ee596f'>Carregando DB-backup</font>, aguarde...";
+LoadedMSG="<font style='color:#ee596f'>DB-backup</font> carregado com sucesso.";
+PLfile = "pl_Backup.bin";
+loadScript2();}
+
+function load_DBRestore(){
+progress.innerHTML="<font style='color:#ee596f'>Carregando DB-Restore</font>, aguarde...";
+LoadedMSG="<font style='color:#ee596f'>DB-Restore</font> carregado com sucesso.";
+PLfile = "pl_Restore.bin";
+loadScript2();}
+
+function load_dumpergu(){
+progress.innerHTML="<font style='color:#ee596f'>Carregando Game & Update Dumper</font>, aguarde...";
+LoadedMSG="<font style='color:#ee596f'>Game & Update Dumper</font> carregado com sucesso.";
+PLfile = "pl_dumperGU.bin";
+loadScript2();}
+
+function load_enabledex(){
+progress.innerHTML="<font style='color:#ee596f'>Carregando Enable-Dex</font>, aguarde...";
+LoadedMSG="<font style='color:#ee596f'>Enable-Dex</font> carregado com sucesso.";
+PLfile = "pl_enabledex.bin";
+loadScript2();}
+
+function load_webrte(){
+progress.innerHTML="<font style='color:#ee596f'>Carregando WebRTE</font>, aguarde...";
+LoadedMSG="<font style='color:#ee596f'>WebRTE</font> carregado com sucesso.";
+PLfile = "pl_webrte.bin";
+loadScript2();}
+
 </script>
 	
 </body>
